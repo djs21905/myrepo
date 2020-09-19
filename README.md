@@ -2,4 +2,4 @@
 434 GCP project
 
 
-[![<djs21905>](https://circleci.com/<gh>/<djs21905>/<myrepo>.svg?style=svg)](https://app.circleci.com/pipelines/github/djs21905/myrepo)
+[![<CircleCI>](https://circleci.com/<gh>/<djs21905>/<myrepo>.svg?style=svg)](https://app.circleci.com/pipelines/github/djs21905/myrepo)
