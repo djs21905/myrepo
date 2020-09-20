@@ -5,7 +5,7 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: myrepolib/repomod.app
+  script: main.app
 
 libraries:
 - name: flask
