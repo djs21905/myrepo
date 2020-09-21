@@ -59,4 +59,4 @@ jobs:
             rm /tmp/sa_key.json
             gcloud config set project myrepo-290018
             gcloud config set compute/zone us-east1
-            glcoud app deploy
+            gcloud app deploy
