@@ -51,6 +51,13 @@ jobs:
           command: |
             . venv/bin/activate
             make lint
+build_master:    
+    jobs:
+      - build_master:
+          filters:
+            branches:
+              only:
+                - master
       - run:
           name: deploy to app engine
           command: |
