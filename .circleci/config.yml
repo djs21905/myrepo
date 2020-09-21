@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.6.1
+      - image: google/cloud-sdk
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -30,7 +30,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
+            apt-get install -y python3.8-venv
             . venv/bin/activate
             pip install -r requirements.txt
       - save_cache:
@@ -50,3 +50,12 @@ jobs:
           command: |
             . venv/bin/activate
             make lint
+      - run:
+          name: deploy to app engine
+          command: |
+            echo ${GCLOUD_SERVICE_KEY} > /tmp/sa_key.json 
+            gcloud auth activate-service-account --key-file=/tmp/sa_key.json
+            rm /tmp/sa_key.json
+            gcloud config set project myrepo-290018
+            gcloud config set compute/zone us-east1
+            glcoud app deploy
