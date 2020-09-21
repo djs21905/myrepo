@@ -51,10 +51,16 @@ jobs:
           command: |
             . venv/bin/activate
             make lint
+build_master:    
+    jobs:
+      - build_master:
+          filters:
+            branches:
+              only:
+                - master
       - run:
           name: deploy to app engine
           command: |
-            if: branch = master
             echo ${GCLOUD_SERVICE_KEY} > /tmp/sa_key.json 
             gcloud auth activate-service-account --key-file=/tmp/sa_key.json
             rm /tmp/sa_key.json
