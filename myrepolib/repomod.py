@@ -5,12 +5,13 @@ def myfunc():
 
 
 from flask import Flask
+from flask import jsonify
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    return "Hello World!testngwovwv!"
+    return jsonify("Hello World!testngwovwv!")
 
 if __name__ == '__main__':
     app.run()
