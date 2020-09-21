@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return jsonify(value = "Hello 434")
+    return jsonify(value = "Hello 434 class!")
 
 if __name__ == '__main__':
     app.run()
