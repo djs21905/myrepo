@@ -25,7 +25,7 @@ try:
         for row in rows:
             a = row.name
         return jsonify(value = "Hello 434 class!", test=a)
-except DefaultCredentialsError:
+except:
     @app.route('/')
     def hello():
         return jsonify(value = "Hello 434 class!")
