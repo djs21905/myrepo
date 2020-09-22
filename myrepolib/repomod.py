@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import jsonify
 from google.cloud import bigquery
-
+from google.auth import *
 
 
 def myfunc():
