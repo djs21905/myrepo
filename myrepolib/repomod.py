@@ -23,9 +23,9 @@ try:
     @app.route('/')
     def hello():
         for row in rows:
-            print(row.name)
-        return jsonify(value = "Hello 434 class!", test=row.name)
-except:
+            a = row.name
+        return jsonify(value = "Hello 434 class!", test=a)
+except DefaultCredentialsError:
     @app.route('/')
     def hello():
         return jsonify(value = "Hello 434 class!")
