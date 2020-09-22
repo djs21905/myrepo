@@ -26,7 +26,7 @@ try:
             a = row.name
         return jsonify(value = "Hello 434 class!", test=a)
 except Exception as e:
-    print("Error '{0}' occured. Arguments {1}.".format(e.message, e.args))    
+    print(e)    
     @app.route('/')
     def hello():
         return jsonify(value = "Hello 434 class!")
