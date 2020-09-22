@@ -3,7 +3,7 @@ from flask import jsonify
 from google.cloud import bigquery
 
 
-logging.basicConfig()
+
 def myfunc():
     return 1
 
