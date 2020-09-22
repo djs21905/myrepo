@@ -1,7 +1,9 @@
 from flask import Flask
 from flask import jsonify
 from google.cloud import bigquery
+import logging
 
+logging.basicConfig()
 def myfunc():
     return 1
 
@@ -26,6 +28,7 @@ try:
             a = row.name
         return jsonify(value = "Hello 434 class!", test=a)
 except Exception: 
+    logging.error('Failed.', exc_info=True)
     @app.route('/')
     def hello():
         return jsonify(value = "Hello 434 class!")
