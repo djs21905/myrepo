@@ -21,8 +21,9 @@ def hello():
     'SELECT country_name FROM `myrepo-290018.434project.covid` WHERE date = "2020-07-07" LIMIT 1')
     query_job = client.query(QUERY) 
     result = query_job.result() 
-    #for item in result:
-        #a = item[0] 
+    for item in result:
+        a = item[0] 
+    print(a,result)
     return jsonify(value = "Hello 434 class!")
 if __name__ == '__main__':
     app.run()
