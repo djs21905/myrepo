@@ -23,6 +23,7 @@ def hello():
     result = query_job.result() 
     for item in result:
         a = item[0] 
-    return jsonify(value = "Hello 434 class!", test=a)
+    print(a,result)
+    return jsonify(value = "Hello 434 class!")
 if __name__ == '__main__':
     app.run()
