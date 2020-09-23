@@ -1,8 +1,10 @@
 from flask import Flask
 from flask import jsonify
-#from google.cloud import bigquery
+from google.cloud import bigquery
+import os
 #from google.auth import exceptions
 #
+
 
 
 def myfunc():
@@ -15,9 +17,7 @@ app = Flask(__name__)
 
     # Perform a query.
     QUERY = (
-    'SELECT name FROM `bigquery-public-data.usa_names.usa_1910_2013` '
-    'WHERE state = "TX" '
-    'LIMIT 100')
+    'SELECT country_name FROM `myrepo-290018.434project.covid` WHERE date = '2020-07-07' LIMIT 1)
     query_job = client.query(QUERY)  # API request
     rows = query_job.result()  # Waits for query to finish
 
@@ -34,6 +34,12 @@ except exceptions.DefaultCredentialsError:
 
 @app.route('/')
 def hello():
-    return jsonify(value = "Hello 434 class!")
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'service_key.json'
+    client = bigquery.Client()
+    QUERY = (
+    'SELECT country_name FROM `myrepo-290018.434project.covid` WHERE date = "2020-07-07" LIMIT 1')
+    query_job = client.query(QUERY) 
+    result = query_job.result()  
+    return jsonify(value = "Hello 434 class!", test=result)
 if __name__ == '__main__':
     app.run()
