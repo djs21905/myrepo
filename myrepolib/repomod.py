@@ -11,7 +11,7 @@ def myfunc():
 app = Flask(__name__)
 
 try:
-    #client = bigquery.Client()
+    client = bigquery.Client()
 
     # Perform a query.
     '''QUERY = (
