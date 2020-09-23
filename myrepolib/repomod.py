@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import jsonify
-from google.cloud import bigquery
+#from google.cloud import bigquery
 from google.auth import exceptions
 #
 
@@ -11,7 +11,7 @@ def myfunc():
 app = Flask(__name__)
 
 try:
-    client = bigquery.Client()
+    #client = bigquery.Client()
 
     # Perform a query.
 
