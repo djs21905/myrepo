@@ -28,7 +28,7 @@ try:
         for row in rows:
             a = row.name
         return jsonify(value = "Hello 434 class!", test=a)
-except google.auth.exceptions.DefaultCredentialsError: 
+except exceptions.DefaultCredentialsError: 
     @app.route('/')
     def hello():
         return jsonify(value = "Hello 434 class!")
