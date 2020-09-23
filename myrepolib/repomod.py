@@ -20,15 +20,12 @@ try:
     query_job = client.query(QUERY)  # API request
     rows = query_job.result()  # Waits for query to finish
 
-    #for row in rows:
-        #print(row.name)
-
     @app.route('/')
     def hello():
-        for row in rows:
-            a = row.name
-        return jsonify(value = "Hello 434 class!", test=a)
+        print("the master branch")
+        return jsonify(value = "Hello 434 class! test")
 except exceptions.DefaultCredentialsError: 
+    print("the non master branch")
     @app.route('/')
     def hello():
         return jsonify(value = "Hello 434 class!")
