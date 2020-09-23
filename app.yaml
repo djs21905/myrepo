@@ -12,6 +12,6 @@ libraries:
   version: 0.12
 skip_files:
 - .git
-- .venv
-- venv 
+#- .venv
+#- venv 
 - logs/
