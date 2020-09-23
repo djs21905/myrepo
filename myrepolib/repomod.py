@@ -11,14 +11,14 @@ def myfunc():
 app = Flask(__name__)
 
 try:
-    client = bigquery.Client()
+    #client = bigquery.Client()
 
     # Perform a query.
-    QUERY = (
+    '''QUERY = (
         'SELECT * FROM `myrepo-290018.434project.covid`'
         'LIMIT 10')
     query_job = client.query(QUERY)  # API request
-    rows = query_job.result()  # Waits for query to finish
+    rows = query_job.result()  # Waits for query to finish'''
 
     @app.route('/')
     def hello():
