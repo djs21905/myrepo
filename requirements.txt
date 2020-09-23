@@ -8,5 +8,6 @@ nbval
 click
 flask
 requests
+google-cloud
 google-cloud-bigquery
 google-auth

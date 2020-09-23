@@ -24,6 +24,6 @@ def hello():
     for item in result:
         a = item[0] 
     print(a,result)
-    return jsonify(value = "Hello 434 class!")
+    return jsonify(value = "Hello 434 class!", test= a)
 if __name__ == '__main__':
     app.run()
