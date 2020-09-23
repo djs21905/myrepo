@@ -33,7 +33,7 @@ except exceptions.DefaultCredentialsError:
         return jsonify(value = "Hello 434 class!")'''
 
 @app.route('/')
-    def hello():
+def hello():
         return jsonify(value = "Hello 434 class!")
 if __name__ == '__main__':
     app.run()
