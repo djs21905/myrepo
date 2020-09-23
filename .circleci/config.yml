@@ -10,6 +10,7 @@ jobs:
     working_directory: ~/myrepo
     steps:
       - checkout
+      - run: apt-get install -y sudo
 
       # Download and cache dependencies
       - restore_cache:
@@ -20,7 +21,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            apt-get install -y python3-venv
+            sudo apt-get install -y python3-venv
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
@@ -48,6 +49,7 @@ jobs:
     working_directory: ~/myrepo
     steps:
       - checkout
+      - run: apt-get install -y sudo
 
       # Download and cache dependencies
       - restore_cache:
@@ -58,7 +60,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            apt-get install -y python3-venv
+            sudo apt-get install -y python3-venv
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
