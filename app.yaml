@@ -8,11 +8,12 @@ handlers:
 - url: /.*
 
   script: myrepolib.repomod.app
-#libraries:
-#- name: flask
- # version: 0.12
+libraries:
+- name: flask
+  version: 0.12
 skip_files:
 - .git
-#- .venv
+#- .venv 
+# Removed to reach 10k file limit
 - venv 
 - logs/
