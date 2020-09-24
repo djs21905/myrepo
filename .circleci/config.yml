@@ -91,6 +91,7 @@ jobs:
             gcloud config set project myrepo-290018
             gcloud config set compute/zone us-east1
             gcloud app deploy --verbosity=debug
+            pip install google-cloud-bigquery
 workflows:
     version: 2
 #test
