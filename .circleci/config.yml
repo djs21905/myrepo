@@ -90,7 +90,7 @@ jobs:
             rm /tmp/sa_key.json
             gcloud config set project myrepo-290018
             gcloud config set compute/zone us-east1
-            gcloud app deploy
+            gcloud app deploy --verbosity=debug
 workflows:
     version: 2
 #test
