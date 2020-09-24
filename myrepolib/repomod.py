@@ -19,7 +19,7 @@ def hello():
     #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'service_key.json'
     client = bigquery.Client()
     QUERY = (
-    'SELECT country_name FROM `myrepo-290018.434project.covid` WHERE date = "2020-07-08" LIMIT 1')
+    'SELECT country_name FROM `myrepo-290018.434project.covid` WHERE date = "2020-07-14" LIMIT 1')
     query_job = client.query(QUERY) 
     result = query_job.result() 
     for item in result:
