@@ -10,4 +10,5 @@ click
 flask
 requests
 google-cloud-bigquery
+google-cloud-automl
 

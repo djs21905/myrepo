@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>434 Web Application</title>
   </head>
 
   <style>
@@ -29,26 +29,37 @@
         <div class="inner">
             
           <h3 class="masthead-brand">434 Final Project Application {{a}}</h3>
-          <h5 class="masthead-brand">-Loan Default Predictor-</h5> 
+          <h5 class="masthead-brand">-Masters Program Admission Probability Prediction-</h5> 
         </div>
         </div>
       </header>
 
       <main role="main" class="inner cover" >
         <h1 class="cover-heading">Input Model Parameters Here.</h1>
-        <p class="lead">Input values for each of the subsequent model parameters. Once finished, click "Submit Params" and GCP AutoML will generate a prediction.</p>
+        <p class="lead">Input values for each of the subsequent model parameters. Once finished, click <b>SUBMIT</b> and GCP AutoML will generate a prediction.</p>
         <p class="lead">
 
             <form method="POST" action="/test">
                 <div class="form-group">
-                    <label for="Param1">Param1:</label>
-                    <input type="number" class="form-control" id="Param1" name="Param1">
-                    <label for="Param2">Param2:</label>
-                    <input type="number" class="form-control" id="Param2" name = Param2> 
-                    <label for="Param3">Param3:</label>
-                    <input type="number" class="form-control" id="Param3" name = Param3> 
-                    <label for="Param4">Param4:</label>
-                    <input type="number" class="form-control" id="Param4" name = Param4> 
+                    
+                    <input type="number" step = ".01" min = "0" max ="10" class="form-control" id="Param1" name="Param1" placeholder="Cumulative GPA up to 2 Decimal places">
+                    <br>
+                   
+                    <input type="number" class="form-control" id="Param2" name = Param2 placeholder="GRE Score" min="0" max="340"> 
+                    <br>
+                    <input type="number" step = "0.1" min= "0" max = "5" class="form-control" id="Param3" name = Param3 placeholder="Letter of Recommendation Strength: (Scale of 0 - 5) up to 1 Decimal place"> 
+                    <br>
+                    
+                    <input type="number" min = "0" max = "1" class="form-control" id="Param4" name = Param4 placeholder="Undergraduate Research Performed (1 or 0 for yes and no)"> 
+                    <br>
+                  
+                    <input type="number" min = "0" max = "5" step= "0.1" class="form-control" id="Param5" name = Param5 placeholder="Statement of Purpose Letter (Scale of 0 - 5) up to 1 Decimal Place"> 
+                    <br>
+                    <input type="number" min = "0" max = "120" class="form-control" id="Param6" name = Param6 placeholder="TOEFL Score"> 
+                    <br>
+     
+                    <input type="number" min = "1" max = "5" class="form-control" id="Param7" name = Param7 placeholder="University Rating Discrete Value 1-5"> 
+
                     <br>
                     <input class = "btn btn-primary" type="submit" value="SUBMIT">
                 </div>
