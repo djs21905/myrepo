@@ -10,6 +10,6 @@ click
 flask
 requests
 google-cloud-bigquery
-google-cloud-automl
-google-cloud-automl_v1beta1
+google-cloud-automl 
+grpcio
 
