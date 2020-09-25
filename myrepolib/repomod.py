@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 from google.cloud import bigquery
 #import os 
 #from flask import jsonify
@@ -36,6 +36,6 @@ def test():
 
         #Send this data to GCP AutoML and have it return the prediction
     return render_template('test.html', result=result)
-    
+
 if __name__ == '__main__':
     app.run()
