@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+  </head>
+
+  <style>
+    .jumbotron {
+      background-color: rgb(119, 51, 255); /* Orange */
+      color: #ffffff;
+    }
+    </style>
+    
+
+  <body class="text-center">
+    
+    
+     
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto"><div class="jumbotron">
+        <div class="inner">
+            
+          <h3 class="masthead-brand">434 Final Project Application {{a}}</h3>
+          <h5 class="masthead-brand">-Loan Default Predictor-</h5> 
+        </div>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover" >
+        <h1 class="cover-heading">Model Result</h1>
+        <ul>{%for item in result%}
+          <li> {{item}} </li>
+          {% endfor %}
+        </ul>
+        <p class="lead">         
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Final Project Application for MSDS 434 <a href="https://sps.northwestern.edu/masters/data-science/curriculum-specializations.php">Northwestern University</a>, by <a href="https://www.linkedin.com/in/daniel-smith-14a607a8">Daniel Smith</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
